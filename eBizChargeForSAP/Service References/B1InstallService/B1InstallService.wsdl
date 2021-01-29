@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogError">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="err" type="tns:SAPError" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SAPError">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Company" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMsg" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="recDate" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppUser" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LogErrorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UpsertInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="b1info" type="tns:SAPB1Install" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SAPB1Install">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RecID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SubnetMask" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SourceKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBServer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LicenseServer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppPassWD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBPassWD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DBType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="sandbox" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpsertInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpsertInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoByLicSvr">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="licenseServer" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dbname" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoByLicSvrResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoByLicSvrResult" type="tns:SAPB1Install" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoByDomain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInfoByDomainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInfoByDomainResult" type="tns:SAPB1Install" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogErrorSoapIn">
+    <wsdl:part name="parameters" element="tns:LogError" />
+  </wsdl:message>
+  <wsdl:message name="LogErrorSoapOut">
+    <wsdl:part name="parameters" element="tns:LogErrorResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpsertInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:UpsertInfo" />
+  </wsdl:message>
+  <wsdl:message name="UpsertInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:UpsertInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoByLicSvrSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoByLicSvr" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoByLicSvrSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoByLicSvrResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoByDomainSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInfoByDomain" />
+  </wsdl:message>
+  <wsdl:message name="GetInfoByDomainSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInfoByDomainResponse" />
+  </wsdl:message>
+  <wsdl:portType name="B1InstallServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <wsdl:input message="tns:LogErrorSoapIn" />
+      <wsdl:output message="tns:LogErrorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpsertInfo">
+      <wsdl:input message="tns:UpsertInfoSoapIn" />
+      <wsdl:output message="tns:UpsertInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByLicSvr">
+      <wsdl:input message="tns:GetInfoByLicSvrSoapIn" />
+      <wsdl:output message="tns:GetInfoByLicSvrSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByDomain">
+      <wsdl:input message="tns:GetInfoByDomainSoapIn" />
+      <wsdl:output message="tns:GetInfoByDomainSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="B1InstallServiceSoap" type="tns:B1InstallServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <soap:operation soapAction="http://tempuri.org/LogError" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertInfo">
+      <soap:operation soapAction="http://tempuri.org/UpsertInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByLicSvr">
+      <soap:operation soapAction="http://tempuri.org/GetInfoByLicSvr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByDomain">
+      <soap:operation soapAction="http://tempuri.org/GetInfoByDomain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="B1InstallServiceSoap12" type="tns:B1InstallServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogError">
+      <soap12:operation soapAction="http://tempuri.org/LogError" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpsertInfo">
+      <soap12:operation soapAction="http://tempuri.org/UpsertInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByLicSvr">
+      <soap12:operation soapAction="http://tempuri.org/GetInfoByLicSvr" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInfoByDomain">
+      <soap12:operation soapAction="http://tempuri.org/GetInfoByDomain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="B1InstallService">
+    <wsdl:port name="B1InstallServiceSoap" binding="tns:B1InstallServiceSoap">
+      <soap:address location="https://api1.ebizcharge.net/epic/B1InstallService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="B1InstallServiceSoap12" binding="tns:B1InstallServiceSoap12">
+      <soap12:address location="https://api1.ebizcharge.net/epic/B1InstallService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

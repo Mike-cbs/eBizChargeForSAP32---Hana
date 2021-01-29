@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SBODemoUS" Class="SAPDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=CBSDEVSVR1;Initial Catalog=SBODemoUS;User ID=sa" SettingsObjectName="eBizChargeForSAP.Properties.Settings" SettingsPropertyName="SBODemoUSConnectionString2" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.CCITEM" Member="CCITEMs">
+    <Type Name="CCITEM">
+      <Column Name="ItemID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CommodityCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ItemCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitPrice" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TaxRate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="ProductDesc" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="DiscountRate" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UnitOfMeasure" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductRefNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SKU" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCBATCH" Member="CCBATCHes">
+    <Type Name="CCBATCH">
+      <Column Name="BatchID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RecDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCORDER" Member="CCORDERs">
+    <Type Name="CCORDER">
+      <Column Name="OrderID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BatchID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Imported" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="created" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SAPOrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAPInvoiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAPCustomerID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Error" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="CardName" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="RecDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AuthCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="RefNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TransType" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TransStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="avsResult" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="CardCodeResult" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Shipping" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Tax" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Subtotal" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BillingCompany" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BillingFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BillingLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BillingStreet" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="BillingCity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BillingState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BillingZip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingCompany" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingFirstName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingLastName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingStreet" Type="System.String" DbType="VarChar(80)" CanBeNull="true" />
+      <Column Name="ShippingCity" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingState" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ShippingZip" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CardNum" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CardType" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCJOB" Member="CCJOBs">
+    <Type Name="CCJOB">
+      <Column Name="jobID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Frequency" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRunDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Cancelled" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CancelledDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CancelledBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NextRunDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentID" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCConnectInvoice" Member="CCConnectInvoices">
+    <Type Name="CCConnectInvoice">
+      <Column Name="recID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceGUID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaidAmount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UploadedBalance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UploadDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PaidDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCCPayment" Member="CCCPayments">
+    <Type Name="CCCPayment">
+      <Column Name="recID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateImported" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Member="TypeId" Type="System.String" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCPayFormInvoice" Member="CCPayFormInvoices">
+    <Type Name="CCPayFormInvoice">
+      <Column Name="recID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceGUID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaidAmount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UploadedBalance" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UploadDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PaidDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCPayFormPayment" Member="CCPayFormPayments">
+    <Type Name="CCPayFormPayment">
+      <Column Name="recID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="InvoiceID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PaymentID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateImported" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCCUST" Member="CCCUSTs">
+    <Type Name="CCCUST">
+      <Column Name="recID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CustNum" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MethodID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Surcharge" Type="System.Decimal" DbType="Decimal(10,5)" CanBeNull="true" />
+      <Column Name="[default]" Member="default" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="active" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="Declined" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="methodDescription" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="cardNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="expDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="cardCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="routingNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="checkingAccount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="street" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="city" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="zip" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cardType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="CardName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="CCAccountID" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="methodName" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCTRANS" Member="CCTRANs">
+    <Type Name="CCTRAN">
+      <Column Name="ccTRANSID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="InvoiceID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="DownPaymentInvoiceID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OrderID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CreditMemoID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MethodID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="customerID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="customerName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="crCardNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="recID" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="acsUrl" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="authAmount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="authCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="avsResult" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="avsResultCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="batchNum" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="batchRef" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="cardCodeResult" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cardCodeResultCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="cardLevelResult" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="cardLevelResultCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="conversionRate" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="convertedAmount" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="convertedAmountCurrency" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="custNum" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="error" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="errorCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="isDuplicate" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="payload" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="profilerScore" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="profilerResponse" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="profilerReason" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="refNum" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="remainingBalance" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="result" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="resultCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="statusCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="vpasResultCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="recDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="command" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="amount" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CCORDERID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PaymentID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="CardHolder" Type="System.String" DbType="NVarChar(80)" CanBeNull="true" />
+      <Column Name="creditRef" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Imported" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="CCAccountID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="jobID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SAPPaymentID" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="BatchResult" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="BatchDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeliveryID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="QuoteID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CCCTerminal" Member="CCCTerminals">
+    <Type Name="CCCTerminal">
+      <Column Name="recID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="deviceKey" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="apiKey" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="pin" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="isDefault" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

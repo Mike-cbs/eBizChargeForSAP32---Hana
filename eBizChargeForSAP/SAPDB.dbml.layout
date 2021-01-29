@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.125, 12.25" name="SAPDB">
+  <DataContextMoniker Name="/SAPDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="7bc108c2-ab55-426b-9ea6-899636b96c69" absoluteBounds="0.75, 0.75, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/SAPDBDataContext/CCITEM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdc65737-5fdf-438c-82be-316c8af714a9" absoluteBounds="0.76499999999999968, 1.21, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85ae996a-6927-4f3c-8268-db5a5e0884c3" absoluteBounds="3.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/SAPDBDataContext/CCBATCH" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b44c46ab-87c6-45a6-a0e5-3710330ade00" absoluteBounds="3.7650000000000006, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81efb12d-e83a-4131-9f70-f62709380c41" absoluteBounds="3.75, 3.75, 2, 8.1168440755208326">
+      <DataClassMoniker Name="/SAPDBDataContext/CCORDER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="09877fab-44c6-4170-9660-dd3cb4a5b8c5" absoluteBounds="3.7649999999999997, 4.21, 1.9700000000000002, 7.556844075520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b1770aa-4647-456a-aadd-57be5b7417c4" absoluteBounds="9.75, 7.75, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/SAPDBDataContext/CCJOB" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19fdd1a3-f934-40da-8988-998ef39afa6d" absoluteBounds="9.765, 8.21, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="84f92123-aca4-4f19-883c-efc5f4fdb12d" absoluteBounds="3.25, 0.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/SAPDBDataContext/CCConnectInvoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8fd9ddff-e303-47ef-a6dd-39a79340e652" absoluteBounds="3.265, 0.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ceb440ec-e886-41e1-a2c7-6acc910a80bd" absoluteBounds="5.5, 3.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SAPDBDataContext/CCCPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="542e068b-d35f-4a92-8ace-861e2a70cf02" absoluteBounds="5.515, 3.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91afed1a-6932-4170-9c0e-953dbbf66831" absoluteBounds="0.75, 5.75, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/SAPDBDataContext/CCPayFormInvoice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="231debf1-63b9-4269-87e1-82604abeaba5" absoluteBounds="0.765, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="92572d0d-ddbc-4511-b8c7-a09a94ca7db4" absoluteBounds="0.75, 9.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/SAPDBDataContext/CCPayFormPayment" />
+      <nestedChildShapes>
+        <elementListCompartment Id="269c637e-70ef-4a6b-addf-e7c3d7eebef8" absoluteBounds="0.765, 10.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a75f0af8-02b0-465f-8500-e3033b4f5555" absoluteBounds="9.875, 1.375, 2, 5.8092268880208326">
+      <DataClassMoniker Name="/SAPDBDataContext/CCCUST" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a2c7c9b-f963-499e-bb06-5e4a477da400" absoluteBounds="9.89, 1.835, 1.9700000000000002, 5.249226888020833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3c34c0bc-c47a-4018-8e1c-5938511322ba" absoluteBounds="8, 0.625, 2, 11.385968424479165">
+      <DataClassMoniker Name="/SAPDBDataContext/CCTRAN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd791d7f-4b33-4816-bdf3-cfe9188487ae" absoluteBounds="8.015, 1.085, 1.9700000000000002, 10.825968424479166" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c151109a-caaf-47ba-9672-367f5d2e102d" absoluteBounds="6.75, 2.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/SAPDBDataContext/CCCTerminal" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9dbc9579-c720-41b6-bafc-02a44551cb82" absoluteBounds="6.765, 2.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
